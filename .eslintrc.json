@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "no-console": "warn",
+    "import/first": "error",
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    /*
+    enables presets config for React good practices
+    1. eslint:recommended
+    2. plugin:react/recommended
+    https://www.npmjs.com/package/eslint-plugin-react#recommended
+    */
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    /* hooks eslint 
+    https://www.npmjs.com/package/eslint-plugin-react-hooks
+    */
+    "plugin:react-hooks/recommended",
+    /* 
+    configures
+    1. eslint-config-prettier
+    2. eslint-plugin-prettier
+    https://github.com/prettier/eslint-plugin-prettier 
+    */
+    "plugin:prettier/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "root": true,
+  "plugins": ["react", "@typescript-eslint"],
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "settings": {
+    "react": {
+      "pragma": "React",
+      "version": "detect"
+    }
+  }
+}
